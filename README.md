@@ -1,9 +1,8 @@
 MRSwipeTableViewCell
 --------------------
 
-A `UITableViewCell` that allow swipe right to reveal a background view with parallax effect.
-
-<p align="center"><img src="https://raw.github.com/martinezdelariva/MRSwipeTableViewCell/master/video.gif"/></p>
+A `UITableViewCell` that allow swipe left to reveal a background view with parallax effect.
+See [gift](https://github.com/martinezdelariva/MRSwipeTableViewCell/blob/master/video.gif).
 
 
 ## API Reference
