@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		792D840E18967031003CA509 /* RightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 792D840D18967031003CA509 /* RightView.xib */; };
+		792D8412189670D0003CA509 /* CenterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 792D8411189670D0003CA509 /* CenterView.xib */; };
+		793232531892DB45001B7C2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 793232521892DB45001B7C2C /* Foundation.framework */; };
+		793232551892DB45001B7C2C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 793232541892DB45001B7C2C /* CoreGraphics.framework */; };
+		793232571892DB45001B7C2C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 793232561892DB45001B7C2C /* UIKit.framework */; };
+		7932325D1892DB45001B7C2C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7932325B1892DB45001B7C2C /* InfoPlist.strings */; };
+		7932325F1892DB45001B7C2C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7932325E1892DB45001B7C2C /* main.m */; };
+		793232631892DB45001B7C2C /* MRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 793232621892DB45001B7C2C /* MRAppDelegate.m */; };
+		793232651892DB45001B7C2C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 793232641892DB45001B7C2C /* Images.xcassets */; };
+		7932326C1892DB45001B7C2C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7932326B1892DB45001B7C2C /* XCTest.framework */; };
+		7932326D1892DB45001B7C2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 793232521892DB45001B7C2C /* Foundation.framework */; };
+		7932326E1892DB45001B7C2C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 793232561892DB45001B7C2C /* UIKit.framework */; };
+		793232761892DB45001B7C2C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 793232741892DB45001B7C2C /* InfoPlist.strings */; };
+		793232781892DB45001B7C2C /* MRSwipeCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 793232771892DB45001B7C2C /* MRSwipeCellTests.m */; };
+		793232831892E75B001B7C2C /* MRRootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 793232821892E75B001B7C2C /* MRRootTableViewController.m */; };
+		793232861892E826001B7C2C /* MRSwipeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 793232851892E826001B7C2C /* MRSwipeTableViewCell.m */; };
+		7932328B1892F57D001B7C2C /* MRLabelViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7932328A1892F57D001B7C2C /* MRLabelViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7932326F1892DB45001B7C2C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 793232471892DB45001B7C2C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7932324E1892DB45001B7C2C;
+			remoteInfo = MRSwipeCell;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		792D840D18967031003CA509 /* RightView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RightView.xib; sourceTree = "<group>"; };
+		792D8411189670D0003CA509 /* CenterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CenterView.xib; sourceTree = "<group>"; };
+		7932324F1892DB45001B7C2C /* MRSwipeTableViewCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MRSwipeTableViewCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		793232521892DB45001B7C2C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		793232541892DB45001B7C2C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		793232561892DB45001B7C2C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7932325A1892DB45001B7C2C /* MRSwipeTableViewCell-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MRSwipeTableViewCell-Info.plist"; sourceTree = "<group>"; };
+		7932325C1892DB45001B7C2C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7932325E1892DB45001B7C2C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		793232601892DB45001B7C2C /* MRSwipeTableViewCell-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MRSwipeTableViewCell-Prefix.pch"; sourceTree = "<group>"; };
+		793232611892DB45001B7C2C /* MRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRAppDelegate.h; sourceTree = "<group>"; };
+		793232621892DB45001B7C2C /* MRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MRAppDelegate.m; sourceTree = "<group>"; };
+		793232641892DB45001B7C2C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7932326A1892DB45001B7C2C /* MRSwipeTableViewCellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MRSwipeTableViewCellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7932326B1892DB45001B7C2C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		793232731892DB45001B7C2C /* MRSwipeTableViewCellTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MRSwipeTableViewCellTests-Info.plist"; sourceTree = "<group>"; };
+		793232751892DB45001B7C2C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		793232771892DB45001B7C2C /* MRSwipeCellTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MRSwipeCellTests.m; sourceTree = "<group>"; };
+		793232811892E75B001B7C2C /* MRRootTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRRootTableViewController.h; sourceTree = "<group>"; };
+		793232821892E75B001B7C2C /* MRRootTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRRootTableViewController.m; sourceTree = "<group>"; };
+		793232841892E826001B7C2C /* MRSwipeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRSwipeTableViewCell.h; sourceTree = "<group>"; };
+		793232851892E826001B7C2C /* MRSwipeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRSwipeTableViewCell.m; sourceTree = "<group>"; };
+		793232891892F57D001B7C2C /* MRLabelViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRLabelViewCell.h; sourceTree = "<group>"; };
+		7932328A1892F57D001B7C2C /* MRLabelViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRLabelViewCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7932324C1892DB45001B7C2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				793232551892DB45001B7C2C /* CoreGraphics.framework in Frameworks */,
+				793232571892DB45001B7C2C /* UIKit.framework in Frameworks */,
+				793232531892DB45001B7C2C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		793232671892DB45001B7C2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7932326C1892DB45001B7C2C /* XCTest.framework in Frameworks */,
+				7932326E1892DB45001B7C2C /* UIKit.framework in Frameworks */,
+				7932326D1892DB45001B7C2C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		793232461892DB45001B7C2C = {
+			isa = PBXGroup;
+			children = (
+				793232581892DB45001B7C2C /* MRSwipeCell */,
+				793232711892DB45001B7C2C /* MRSwipeCellTests */,
+				793232511892DB45001B7C2C /* Frameworks */,
+				793232501892DB45001B7C2C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		793232501892DB45001B7C2C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7932324F1892DB45001B7C2C /* MRSwipeTableViewCell.app */,
+				7932326A1892DB45001B7C2C /* MRSwipeTableViewCellTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		793232511892DB45001B7C2C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				793232521892DB45001B7C2C /* Foundation.framework */,
+				793232541892DB45001B7C2C /* CoreGraphics.framework */,
+				793232561892DB45001B7C2C /* UIKit.framework */,
+				7932326B1892DB45001B7C2C /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		793232581892DB45001B7C2C /* MRSwipeCell */ = {
+			isa = PBXGroup;
+			children = (
+				793232611892DB45001B7C2C /* MRAppDelegate.h */,
+				793232621892DB45001B7C2C /* MRAppDelegate.m */,
+				793232811892E75B001B7C2C /* MRRootTableViewController.h */,
+				793232821892E75B001B7C2C /* MRRootTableViewController.m */,
+				793232891892F57D001B7C2C /* MRLabelViewCell.h */,
+				7932328A1892F57D001B7C2C /* MRLabelViewCell.m */,
+				792D840D18967031003CA509 /* RightView.xib */,
+				792D8411189670D0003CA509 /* CenterView.xib */,
+				793232841892E826001B7C2C /* MRSwipeTableViewCell.h */,
+				793232851892E826001B7C2C /* MRSwipeTableViewCell.m */,
+				793232641892DB45001B7C2C /* Images.xcassets */,
+				793232591892DB45001B7C2C /* Supporting Files */,
+			);
+			path = MRSwipeCell;
+			sourceTree = "<group>";
+		};
+		793232591892DB45001B7C2C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7932325A1892DB45001B7C2C /* MRSwipeTableViewCell-Info.plist */,
+				7932325B1892DB45001B7C2C /* InfoPlist.strings */,
+				7932325E1892DB45001B7C2C /* main.m */,
+				793232601892DB45001B7C2C /* MRSwipeTableViewCell-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		793232711892DB45001B7C2C /* MRSwipeCellTests */ = {
+			isa = PBXGroup;
+			children = (
+				793232771892DB45001B7C2C /* MRSwipeCellTests.m */,
+				793232721892DB45001B7C2C /* Supporting Files */,
+			);
+			path = MRSwipeCellTests;
+			sourceTree = "<group>";
+		};
+		793232721892DB45001B7C2C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				793232731892DB45001B7C2C /* MRSwipeTableViewCellTests-Info.plist */,
+				793232741892DB45001B7C2C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7932324E1892DB45001B7C2C /* MRSwipeTableViewCell */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7932327B1892DB45001B7C2C /* Build configuration list for PBXNativeTarget "MRSwipeTableViewCell" */;
+			buildPhases = (
+				7932324B1892DB45001B7C2C /* Sources */,
+				7932324C1892DB45001B7C2C /* Frameworks */,
+				7932324D1892DB45001B7C2C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MRSwipeTableViewCell;
+			productName = MRSwipeCell;
+			productReference = 7932324F1892DB45001B7C2C /* MRSwipeTableViewCell.app */;
+			productType = "com.apple.product-type.application";
+		};
+		793232691892DB45001B7C2C /* MRSwipeTableViewCellTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7932327E1892DB45001B7C2C /* Build configuration list for PBXNativeTarget "MRSwipeTableViewCellTests" */;
+			buildPhases = (
+				793232661892DB45001B7C2C /* Sources */,
+				793232671892DB45001B7C2C /* Frameworks */,
+				793232681892DB45001B7C2C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				793232701892DB45001B7C2C /* PBXTargetDependency */,
+			);
+			name = MRSwipeTableViewCellTests;
+			productName = MRSwipeCellTests;
+			productReference = 7932326A1892DB45001B7C2C /* MRSwipeTableViewCellTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		793232471892DB45001B7C2C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MR;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Jose Luis Martinez de la Riva";
+				TargetAttributes = {
+					793232691892DB45001B7C2C = {
+						TestTargetID = 7932324E1892DB45001B7C2C;
+					};
+				};
+			};
+			buildConfigurationList = 7932324A1892DB45001B7C2C /* Build configuration list for PBXProject "MRSwipeTableViewCell" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 793232461892DB45001B7C2C;
+			productRefGroup = 793232501892DB45001B7C2C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7932324E1892DB45001B7C2C /* MRSwipeTableViewCell */,
+				793232691892DB45001B7C2C /* MRSwipeTableViewCellTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7932324D1892DB45001B7C2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				792D840E18967031003CA509 /* RightView.xib in Resources */,
+				7932325D1892DB45001B7C2C /* InfoPlist.strings in Resources */,
+				793232651892DB45001B7C2C /* Images.xcassets in Resources */,
+				792D8412189670D0003CA509 /* CenterView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		793232681892DB45001B7C2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				793232761892DB45001B7C2C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7932324B1892DB45001B7C2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7932328B1892F57D001B7C2C /* MRLabelViewCell.m in Sources */,
+				7932325F1892DB45001B7C2C /* main.m in Sources */,
+				793232631892DB45001B7C2C /* MRAppDelegate.m in Sources */,
+				793232831892E75B001B7C2C /* MRRootTableViewController.m in Sources */,
+				793232861892E826001B7C2C /* MRSwipeTableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		793232661892DB45001B7C2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				793232781892DB45001B7C2C /* MRSwipeCellTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		793232701892DB45001B7C2C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7932324E1892DB45001B7C2C /* MRSwipeTableViewCell */;
+			targetProxy = 7932326F1892DB45001B7C2C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7932325B1892DB45001B7C2C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7932325C1892DB45001B7C2C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		793232741892DB45001B7C2C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				793232751892DB45001B7C2C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		793232791892DB45001B7C2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7932327A1892DB45001B7C2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7932327C1892DB45001B7C2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MRSwipeCell/MRSwipeTableViewCell-Prefix.pch";
+				INFOPLIST_FILE = "MRSwipeCell/MRSwipeTableViewCell-Info.plist";
+				PRODUCT_NAME = MRSwipeTableViewCell;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7932327D1892DB45001B7C2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MRSwipeCell/MRSwipeTableViewCell-Prefix.pch";
+				INFOPLIST_FILE = "MRSwipeCell/MRSwipeTableViewCell-Info.plist";
+				PRODUCT_NAME = MRSwipeTableViewCell;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		7932327F1892DB45001B7C2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MRSwipeCell.app/MRSwipeCell";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MRSwipeCell/MRSwipeCell-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MRSwipeCellTests/MRSwipeTableViewCellTests-Info.plist";
+				PRODUCT_NAME = MRSwipeTableViewCellTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		793232801892DB45001B7C2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MRSwipeCell.app/MRSwipeCell";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MRSwipeCell/MRSwipeCell-Prefix.pch";
+				INFOPLIST_FILE = "MRSwipeCellTests/MRSwipeTableViewCellTests-Info.plist";
+				PRODUCT_NAME = MRSwipeTableViewCellTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7932324A1892DB45001B7C2C /* Build configuration list for PBXProject "MRSwipeTableViewCell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				793232791892DB45001B7C2C /* Debug */,
+				7932327A1892DB45001B7C2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7932327B1892DB45001B7C2C /* Build configuration list for PBXNativeTarget "MRSwipeTableViewCell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7932327C1892DB45001B7C2C /* Debug */,
+				7932327D1892DB45001B7C2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7932327E1892DB45001B7C2C /* Build configuration list for PBXNativeTarget "MRSwipeTableViewCellTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7932327F1892DB45001B7C2C /* Debug */,
+				793232801892DB45001B7C2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 793232471892DB45001B7C2C /* Project object */;
+}
