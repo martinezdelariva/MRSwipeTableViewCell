@@ -16,8 +16,8 @@ Copy files `MRSwipeTableViewCell.h` and `MRSwipeTableViewCell.m` into your proje
 ## Usage
 
 - Subclass `MRSwipeTableViewCell`;
-- Add to forward content to `centerContentView` property.
-- Add to background content to `rightContentView` property.
+- Add forward view content to `centerContentView` property.
+- Add background view content to `rightContentView` property.
 
 ```objc
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -25,7 +25,7 @@ Copy files `MRSwipeTableViewCell.h` and `MRSwipeTableViewCell.m` into your proje
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {        
         // Content view
-        [self.centerContentView addSubview:[self.customFrontView];
+        [self.centerContentView addSubview:self.customFrontView];
         [self.rightContentView addSubview:self.customRightView];
     }
     
