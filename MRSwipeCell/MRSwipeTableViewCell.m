@@ -1,6 +1,6 @@
 //
-//  MRSwipeCell.m
-//  MRSwipeCell
+//  MRSwipeTableViewCell.m
+//  MRSwipeTableViewCell
 //
 //  Created by Jose Luis Martinez de la Riva on 24/01/14.
 //  Copyright (c) 2014 Jose Luis Martinez de la Riva. All rights reserved.
@@ -41,6 +41,7 @@
 {
     // Right view
     self.rightContentView = [[UIView alloc] init];
+    self.rightContentView.hidden = YES;
     self.rightContentView.frame = ({
         CGRect frame = self.contentView.bounds;
         frame.size.width = [self rightWidth];
@@ -53,7 +54,7 @@
     self.centerContentView = [[UIView alloc] initWithFrame:self.contentView.bounds];
     
     // ScrollView
-    self.scrollView = [[UIScrollView alloc] initWithFrame:self.contentView.bounds];
+    self.scrollView = [[MRScrollView alloc] initWithFrame:self.contentView.bounds];
     self.scrollView.showsHorizontalScrollIndicator = NO;
     self.scrollView.delegate = self;
     self.scrollView.pagingEnabled = YES;
@@ -107,8 +108,10 @@
 - (void)updateState
 {
     if (self.scrollView.contentOffset.x == 0.0f) {
+        self.rightContentView.hidden = YES;
         self.state = MRSwipeTableViewCellStateCenter;
     } else {
+        self.rightContentView.hidden = NO;
         self.state = MRSwipeTableViewCellStateRight;
     }
 }
@@ -121,8 +124,7 @@
     // Delegate
     if (self.state != MRSwipeTableViewCellStatePreparingForReuse) {
         // Right view did show
-        if (self.scrollView.contentOffset.x == CGRectGetWidth(self.rightContentView.bounds)
-            ) {
+        if (self.scrollView.contentOffset.x == CGRectGetWidth(self.rightContentView.bounds)) {
             if ([self.delegate respondsToSelector:@selector(didShowRightView:)]) {
                 [self.delegate didShowRightView:self];
             }
@@ -152,22 +154,29 @@
     [self updateState];
 }
 
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    [self setSelected:NO animated:NO];
+}
+
 #pragma mark -
 #pragma Public Methods
 
 - (void)showRightView:(BOOL)animated
 {
+    if (self.selected) {
+        [self setSelected:NO animated:NO];
+    }
+    
+    self.rightContentView.hidden = NO;
     CGPoint point = CGPointMake(CGRectGetWidth(self.rightContentView.bounds), 0);
     [self.scrollView setContentOffset:point animated:animated];
-
-//    self.state = MRSwipeCellStateRight;
 }
 
 - (void)closeRightView:(BOOL)animated
 {
     [self.scrollView setContentOffset:CGPointZero animated:animated];
-  
-//    self.state = MRSwipeCellStateCenter;
+    self.rightContentView.hidden = YES;
 }
 
 - (void)toggleRightView:(BOOL)animated
@@ -182,6 +191,12 @@
 - (void)revealRightView
 {
     if (self.state == MRSwipeTableViewCellStateCenter) {
+        if (self.selected) {
+            [self setSelected:NO animated:NO];
+        }
+        
+        self.rightContentView.hidden = NO;
+        
         [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             CGPoint point = CGPointMake(CGRectGetWidth(self.rightContentView.bounds) / 6, 0);
             [self.scrollView setContentOffset:point];
@@ -191,6 +206,7 @@
                 [self.scrollView setContentOffset:CGPointZero];
             } completion:^(BOOL finished) {
                 self.state = MRSwipeTableViewCellStateCenter;
+                self.rightContentView.hidden = YES;
             }];
         }];
     }
@@ -205,6 +221,84 @@
     } else if (aState == MRSwipeTableViewCellStateRight) {
         [self showRightView:NO];
     }
+}
+
+@end
+
+
+//
+//  MRScrollView
+//
+//  Created by Jose Luis Martinez de la Riva on 20/02/14.
+//  Copyright (c) 2014 Jose Luis Martinez de la Riva. All rights reserved.
+//
+
+@interface MRScrollView () <UIGestureRecognizerDelegate>
+@property (weak, nonatomic) UITouch *nextResponderTouch;
+@end
+
+@implementation MRScrollView
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{    
+    self.nextResponderTouch = [touches anyObject];
+    [self.nextResponder touchesBegan:touches withEvent:event];
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    if ([self isTouchBelongToSelf:[touches anyObject]]) {
+        if (self.nextResponderTouch) {
+            [self.nextResponder touchesCancelled:[NSSet setWithObject:self.nextResponderTouch] withEvent:event];
+            self.nextResponderTouch = nil;
+        }
+
+        [super touchesMoved:touches withEvent:event];
+    } else {
+        [self.nextResponder touchesMoved:touches withEvent:event];
+    }
+}
+
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    if ([self isTouchBelongToSelf:[touches anyObject]]) {
+        [super touchesCancelled:touches withEvent:event];
+    } else {
+        [self.nextResponder touchesCancelled:touches withEvent:event];
+    }
+    
+    self.nextResponderTouch = nil;
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    if ([self isTouchBelongToSelf:[touches anyObject]]) {
+        [super touchesEnded:touches withEvent:event];
+    } else {
+        [self.nextResponder touchesEnded:touches withEvent:event];
+    }
+    
+    self.nextResponderTouch = nil;
+}
+
+- (BOOL)isTouchBelongToSelf:(UITouch *)touch
+{
+    if ([self isTouchMoving:touch] || !self.nextResponderTouch) {
+        return YES;
+    }
+    
+    return NO;
+}
+
+- (BOOL)isTouchMoving:(UITouch *)touch
+{
+    CGPoint last = [touch previousLocationInView:self];
+    CGPoint now = [touch locationInView:self];
+    
+    CGFloat deltaX = fabs(last.x - now.x);
+    CGFloat deltaY = fabs(last.y - now.y);
+    
+    return (deltaX - deltaY) != 0; // change to allow more error margin
 }
 
 @end

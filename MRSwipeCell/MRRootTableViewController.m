@@ -18,27 +18,12 @@
 
 @implementation MRRootTableViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     [self.tableView registerClass:[MRLabelViewCell class] forCellReuseIdentifier:@"MRLabelViewCell"];
     self.openIndexPathArray = [NSMutableArray array];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
@@ -66,6 +51,21 @@
     }
     
     return cell;
+}
+
+- (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    MRSwipeTableViewCell *cell = (MRSwipeTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+    if (cell.state == MRSwipeTableViewCellStateCenter) {
+        return YES;
+    }
+    
+    return NO;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"Row selected: %d", indexPath.row);
 }
 
 #pragma mark - MRSwipeCell Delegate

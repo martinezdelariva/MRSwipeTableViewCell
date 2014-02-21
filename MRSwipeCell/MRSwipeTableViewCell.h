@@ -1,6 +1,6 @@
 //
-//  MRSwipeCell.h
-//  MRSwipeCell
+//  MRSwipeTableViewCell.h
+//  MRSwipeTableViewCell
 //
 //  Created by Jose Luis Martinez de la Riva on 24/01/14.
 //  Copyright (c) 2014 Jose Luis Martinez de la Riva. All rights reserved.
@@ -52,5 +52,17 @@ typedef NS_ENUM (NSUInteger, MRSwipeTableViewCellState) {
 - (void)toggleRightView:(BOOL)animated;
 - (void)revealRightView;
 - (void)setInitialRightViewState:(MRSwipeTableViewCellState)state;
+
+@end
+
+
+//
+//  MRScrollView
+//
+//  Created by Jose Luis Martinez de la Riva on 20/02/14.
+//  Copyright (c) 2014 Jose Luis Martinez de la Riva. All rights reserved.
+//
+
+@interface MRScrollView : UIScrollView
 
 @end
