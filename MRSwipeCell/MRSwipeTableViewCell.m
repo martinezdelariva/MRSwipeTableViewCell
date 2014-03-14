@@ -83,6 +83,29 @@
     self.state = MRSwipeTableViewCellStateCenter;
 }
 
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    self.rightContentView.frame = ({
+        CGRect frame = self.rightContentView.frame;
+        frame.size.height = self.contentView.bounds.size.height;
+        frame;
+    });
+    
+    self.centerContentView.frame = ({
+        CGRect frame = self.centerContentView.frame;
+        frame.size.height = self.contentView.bounds.size.height;
+        frame;
+    });
+    
+    self.scrollView.frame = ({
+        CGRect frame = self.scrollView.frame;
+        frame.size.height = self.contentView.bounds.size.height;
+        frame;
+    });
+}
+
 #pragma mark -
 #pragma Protected Methods
 
