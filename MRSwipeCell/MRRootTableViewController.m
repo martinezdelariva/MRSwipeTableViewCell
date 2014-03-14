@@ -65,7 +65,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"Row selected: %d", indexPath.row);
+    NSLog(@"Row selected: %ld", (long)indexPath.row);
 }
 
 #pragma mark - MRSwipeCell Delegate
@@ -75,7 +75,7 @@
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
     [self.openIndexPathArray removeObject:[NSNumber numberWithInteger:indexPath.row]];
 
-    NSLog(@"Hide rightView for indexPath.row %d", indexPath.row);
+    NSLog(@"Hide rightView for indexPath.row %ld", (long)indexPath.row);
 }
 
 - (void)didShowRightView:(MRSwipeTableViewCell *)cell
@@ -83,7 +83,7 @@
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
     [self.openIndexPathArray addObject:[NSNumber numberWithInteger:indexPath.row]];
     
-    NSLog(@"Show rightView for indexPath.row %d", indexPath.row);
+    NSLog(@"Show rightView for indexPath.row %ld", (long)indexPath.row);
 }
 
 @end
